@@ -466,6 +466,10 @@ footer section.footer-socials a i {
 		padding: 3px;
 	}
 
+	header div p {
+		margin-left: 3rem;
+	}
+	
 	/* For Business type section of the page */
 	main section.affidavit-type {
 		flex-wrap: wrap;
@@ -549,6 +553,7 @@ footer section.footer-socials a i {
 
 	header div p {
 		font-size: var(--text-size);
+		margin-left: 1rem;
 	}
 
 	/* Affidavit Steps */
