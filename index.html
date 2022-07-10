@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Home Page | E-Forms</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input id="nav-toggle" type="checkbox" />
+            <div class="logo"><img src="./images/logo.png" /></div>
+            <ul class="links">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">Personal</a></li>
+                <li><a href="#work">Business</a></li>
+                <li><a href="#projects" class="second-to-last-nav-link">Official</a></li>
+                <li><a href="#projects" class="text"><i class="fa-solid fa-user-gear"></i> <span>Account</span></a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+
+        <div class="header-content flex">
+            <div>
+                <h1>
+                    <span>Sign and Fill</span>
+                    <span>Nigerian Courts</span>
+                    <span>Affidavit</span>
+                </h1>
+                <p>From The Comfort Of Your Home</p>
+            </div>
+
+            <img src="./images/header-bg.svg" alt="E-Forms header image" />
+        </div>
+    </header>
+
+    <!-- *** MAIN SITE SECTION *** -->
+    <main>
+        <!-- Affidavit types -->
+        <section class="affidavit-type container flex text-center">
+            <div class="card">
+                <h2>Personal</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Porro, dolorum!
+                </p>
+            </div>
+            <div class="card">
+                <h2>Business</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Porro, dolorum!
+                </p>
+            </div>
+            <div class="card">
+                <h2>Official</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Porro, dolorum!
+                </p>
+            </div>
+        </section>
+        <!-- End Affidavit types -->
+
+        <!-- Search affidavit -->
+        <section class="search-affidavit container mt-5">
+            <form action="" class="flex">
+                <input type="text" placeholder="type in the name of your document" />
+                <select name="" id="">
+                    <option value="" selected>All States</option>
+                    <option value="ondo">Ondo</option>
+                </select>
+                <button>Search</button>
+            </form>
+        </section>
+        <!-- End Search affidavit -->
+
+        <!-- Affidavit steps -->
+        <section class="affidavit-steps mt-5 container text-center">
+            <h2>Get your filled and stamped court affidavit in 3 steps</h2>
+            <div class="flex mt-2">
+                <div class="flex">
+                    <span class="step-number">01</span>
+                    <span class="step-icon-container"><i class="fa-solid fa-calendar-check"></i></span>
+                    <p>Select form</p>
+                </div>
+                <div class="flex">
+                    <span class="step-number">02</span>
+                    <span class="step-icon-container"><i class="fa-solid fa-file-signature"></i></span>
+                    <p>Fill details</p>
+                </div>
+                <div class="flex">
+                    <span class="step-number">03</span>
+                    <span class="step-icon-container"><i class="fa-solid fa-print"></i></span>
+                    <p>Print or Delivery</p>
+                </div>
+            </div>
+        </section>
+        <!-- End Affidavit steps -->
+
+        <!-- popular forms -->
+        <section class="popular-forms mt-5 text-center">
+            <h2>Popular Forms</h2>
+            <div class="flex">
+                <div>
+                    <span><i class="fa-solid fa-user-pen"></i></span>
+                    <p>Change of name</p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-chalkboard-user"></i></span>
+                    <p>Age Declaration</p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-walkie-talkie"></i></span>
+                    <p>Attestation</p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-file-contract"></i></span>
+                    <p>Legal Documents</p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-key"></i></span>
+                    <p>Change of ownership</p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-thumbs-up"></i></span>
+                    <p>Good Behaviour</p>
+                </div>
+            </div>
+        </section>
+        <!-- end popular forms -->
+
+        <!-- find courts in your state -->
+        <section class="find-courts container mt-5 text-center">
+            <h2>Find the courts in your state</h2>
+            <form action="">
+                <select name="" id="">
+                    <option value="" selected disabled>select state</option>
+                    <option value="ondo">Ondo</option>
+                </select>
+                <button>Search</button>
+            </form>
+        </section>
+        <!-- end find courts in your state -->
+
+        <!-- courts search result page -->
+        <section class="courts-search-result flex container mt-4">
+            <div>
+                <i class="card fa-solid fa-globe"></i>
+                <strong>0</strong>
+                <span>Supreme Court</span>
+            </div>
+            <div>
+                <i class="card fa-solid fa-anchor"></i>
+                <strong>4</strong>
+                <span>State High Court</span>
+            </div>
+            <div>
+                <i class="card fa-brands fa-app-store-ios"></i>
+                <strong>0</strong>
+                <span>Court of Appeal</span>
+            </div>
+            <div>
+                <i class="card fa-solid fa-network-wired"></i>
+                <strong>2</strong>
+                <span>Marriage Registry</span>
+            </div>
+            <div>
+                <i class="card fa-solid fa-anchor-lock"></i>
+                <strong>1</strong>
+                <span>Federal High Court</span>
+            </div>
+            <div>
+                <i class="card fa-solid fa-ankh"></i>
+                <strong>2</strong>
+                <span>Customary Court of Appeal</span>
+            </div>
+        </section>
+        <!-- end courts search result page -->
+    </main>
+    <!-- *** END MAIN SITE SECTION *** -->
+
+
+    <footer class="pb-4">
+        <section class="container flex first mt-2">
+            <img src="./images/logo.png" class="logo" alt="e-form logo" />
+            <a href="#" class="login">Login</a>
+            <a href="#">Create account</a>
+        </section>
+        <section class="container footer-links flex mt-4">
+            <a href="#">Home</a>
+            <a href="#">FAQs</a>
+            <a href="#">Account</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Personal</a>
+            <a href="#">My Documents</a>
+            <a href="#">Pricing</a>
+            <a href="#">Business</a>
+            <a href="#">Track my form</a>
+            <a href="#">Terms and Condition</a>
+            <a href="#">Official</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Legal</a>
+        </section>
+        <section class="container footer-socials flex mt-4">
+            <a href="#">info@eforms.com</a>
+            <a href="#">+234 (0)345 7263 7236</a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </section>
+    </footer>
+
+</html>
