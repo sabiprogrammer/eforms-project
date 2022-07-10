@@ -459,6 +459,7 @@ footer section.footer-socials a i {
 
 	header div h1 {
 		font-size: 35px;
+		margin-left: 3rem;
 	}
 
 	header div h1 span {
@@ -529,7 +530,7 @@ footer section.footer-socials a i {
 
 	header>div.header-content {
 		display: block;
-		padding-left: 20px;
+		/* padding-left: 2px; */
 	}
 
 	header>div>img {
@@ -538,7 +539,8 @@ footer section.footer-socials a i {
 	}
 
 	header div h1 {
-		font-size: 40px;
+		font-size: 30px;
+		margin-left: 1rem;
 	}
 
 	header div h1 span {
