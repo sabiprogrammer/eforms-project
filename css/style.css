@@ -14,6 +14,11 @@
 	--br: 5px;
 }
 
+::selection {
+	color: white;
+	background-color: var(--primary-color);
+}
+
 * {
 	box-sizing: border-box;
 	/* makes it so that margin and padding does not add to the size of the element*/
@@ -152,31 +157,28 @@ header div p {
 	margin-left: 5rem;
 }
 
+/* Header support icon */
+header img.support-icon {
+	position: fixed;
+	right: 0;
+	top: 450px;
+	width: 90px;
+}
+
+/* End Header support icon */
 /* End Header Content */
 
 /* MAIN HOME SECTIONS */
 
-/* Affidavit Type */
-main section.affidavit-type {
+section h2 {
+	font-size: var(--big-text-size);
+}
+
+/* search affidavit */
+section.first-search {
 	margin-top: -60px;
 }
 
-main section.affidavit-type div {
-	transition: transform 1s;
-}
-
-main section.affidavit-type div:hover {
-	transform: translateY(-10px);
-}
-
-main section.affidavit-type div h2 {
-	color: var(--primary-color);
-}
-
-/* End Affidavit Type */
-
-
-/* search affidavit */
 section.search-affidavit form {
 	justify-content: space-evenly;
 	width: 100%;
@@ -211,11 +213,23 @@ section.search-affidavit form button {
 
 /* end search affidavit */
 
-/* Affidavit Steps */
-section.affidavit-steps>h2 {
-	font-size: var(--big-text-size);
+/* Affidavit Type */
+main section.affidavit-type div {
+	transition: transform 1s;
 }
 
+main section.affidavit-type div:hover {
+	transform: translateY(-10px);
+}
+
+main section.affidavit-type div h2 {
+	color: var(--primary-color);
+}
+
+/* End Affidavit Type */
+
+
+/* Affidavit Steps */
 section.affidavit-steps>div {
 	justify-content: space-between;
 }
@@ -277,17 +291,9 @@ section.popular-forms>div>div p {
 	font-size: 20px;
 }
 
-section.popular-forms h2 {
-	font-size: var(--big-text-size);
-}
-
 /* end popular forms section */
 
 /* find courts */
-section.find-courts h2 {
-	font-size: var(--big-text-size);
-}
-
 section.find-courts form select {
 	width: 50%;
 }
@@ -384,6 +390,14 @@ footer section.footer-socials a i {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1020px) {
+
+	/* Header support icon */
+	header img.support-icon {
+		top: 300px;
+		width: 60px;
+	}
+
+	/* End Header support icon */
 	header>div.header-content div {
 		margin-top: 150px;
 	}
@@ -395,6 +409,9 @@ footer section.footer-socials a i {
 
 /* For Tablets */
 @media screen and (max-width: 768px) {
+	::placeholder {
+		font-size: 14px;
+	}
 
 	/* Header/Nav section */
 	nav .logo {
@@ -469,8 +486,16 @@ footer section.footer-socials a i {
 	header div p {
 		margin-left: 3rem;
 	}
-	
+
+	section>h2 {
+		font-size: 20px;
+	}
+
 	/* For Business type section of the page */
+	section.first-search {
+		margin-top: 2px;
+	}
+
 	main section.affidavit-type {
 		flex-wrap: wrap;
 	}
@@ -489,10 +514,6 @@ footer section.footer-socials a i {
 
 
 	/* Affidavit Steps */
-	section.affidavit-steps>h2 {
-		font-size: var(--medium-text-size);
-	}
-
 	section.affidavit-steps>div>div {
 		padding: 15px;
 	}
@@ -524,6 +545,10 @@ footer section.footer-socials a i {
 
 	/* end popular forms section */
 
+	footer {
+		padding-top: 1rem;
+	}
+
 }
 
 /* For mobile */
@@ -534,7 +559,6 @@ footer section.footer-socials a i {
 
 	header>div.header-content {
 		display: block;
-		/* padding-left: 2px; */
 	}
 
 	header>div>img {
@@ -603,8 +627,16 @@ footer section.footer-socials a i {
 	}
 
 	/* footer */
+	footer a {
+		font-size: 13px;
+	}
+
 	footer section.footer-socials a {
 		padding: 10px;
+	}
+
+	footer section.footer-links {
+		margin-top: 1rem;
 	}
 
 }
