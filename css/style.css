@@ -407,6 +407,204 @@ section aside form button {
 
 /* ---------- END CHANGE OF NAME PAGE DESIGN ---------- */
 
+
+/* ---------- FILL FORM PAGE ---------- */
+.step-wizard {
+	margin-top: 7rem;
+}
+
+.step-wizard-list {
+	color: #333;
+	list-style-type: none;
+	display: flex;
+	padding: 20px 10px;
+	position: relative;
+}
+
+.step-wizard-item {
+	padding: 0 20px;
+	flex-basis: 0;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	/* min-width: 170px; */
+	position: relative;
+}
+
+.step-wizard-item+.step-wizard-item:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 19px;
+	background: var(--primary-color);
+	width: 100%;
+	height: 2px;
+	transform: translateX(-50%);
+	z-index: -10;
+}
+
+.progress-count {
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-weight: 600;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	color: transparent;
+}
+
+.progress-count:after {
+	content: "";
+	height: 40px;
+	width: 40px;
+	background: var(--primary-color);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	z-index: -10;
+}
+
+.progress-count:before {
+	content: "";
+	height: 10px;
+	width: 20px;
+	border-left: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%) rotate(-45deg);
+	transform-origin: center center;
+}
+
+.progress-label {
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.current-item .progress-count:before,
+.current-item~.step-wizard-item .progress-count:before {
+	display: none;
+}
+
+.current-item~.step-wizard-item .progress-count:after {
+	height: 10px;
+	width: 10px;
+}
+
+.current-item~.step-wizard-item .progress-label {
+	opacity: 0.5;
+}
+
+.current-item .progress-count:after {
+	background: #fff;
+	border: 2px solid var(--primary-color);
+}
+
+.current-item .progress-count {
+	color: var(--primary-color);
+}
+
+section.form-details-container h1 {
+	color: var(--primary-color);
+	border-bottom: 3px solid #eee;
+	width: 90%;
+}
+
+section.form-details-container .logos {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+}
+
+section.form-details-container .logos img {
+	width: 100px;
+	height: 100px;
+}
+
+section.form-details-container .logos p {
+	flex: 2;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	font-size: var(--text-size);
+	font-weight: bolder;
+	text-decoration: underline;
+	word-spacing: 5px;
+}
+section.form-details-container .upload-passport{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 3rem;
+	/* width: 100%; */
+}
+section.form-details-container .upload-passport div.upload-form-container{
+	width: 200px;
+	height: 200px;
+	border: 3px dashed black;
+}
+.upload-form{
+	height: 100%;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+.upload-form button{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background-color: white;
+	color: var(--primary-color);
+	text-decoration: underline;
+	font-size: var(--medium-text-size);
+}
+section.edit-affidavit-details{
+	font-size: var(--text-size);
+	word-spacing: 5px;
+}
+section div.oath-signatories{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+.sign-lines{
+	display: inline-block;
+	width: 150px;
+	height: 2px;
+	background-color: black;
+}
+.oath-form-final-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+}
+.oath-form-final-section button{
+	background-color: var(--primary-color);
+	color: white;
+	font-size: var(--text-size);
+	outline: none;
+	border: none;
+	border-radius: var(--br);
+	padding: 15px 40px;
+	cursor: pointer;
+}
+/* ---------- END FILL FORM PAGE ---------- */
+
 /* FOOTER */
 footer {
 	background-color: var(--dark-color);
@@ -732,6 +930,28 @@ footer section.footer-socials a i {
 	.faq-container {
 		padding: 5px 20px;
 		margin-top: 30px;
+	}
+
+	/* FILL FORM PAGE */
+	section.form-details-container .logos img {
+		width: 50px;
+		height: 50px;
+	}
+
+	section.form-details-container .logos p {
+		font-size: 12px;
+		font-weight: bold;
+	}
+	section.form-details-container .upload-passport{
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	section div.oath-signatories{
+		display: block;
+		text-align: center;
+	}
+	section div.oath-signatories div{
+		margin-bottom: 50px;
 	}
 
 	/* footer */
