@@ -32,7 +32,6 @@ html {
 	margin: 0;
 	height: 100%;
 	width: 100%;
-	height: 200vh;
 }
 
 /* *** HEADER STYLING *** */
@@ -170,7 +169,7 @@ header img.support-icon {
 
 /* MAIN HOME SECTIONS */
 
-section h2 {
+section>h2 {
 	font-size: var(--big-text-size);
 }
 
@@ -331,6 +330,82 @@ section.courts-search-result div {
 /* end courts search result */
 
 /* END MAIN HOME SECTIONS */
+
+
+/* ---------- CHANGE OF NAME PAGE DESIGN ---------- */
+section.con-sectioning {
+	display: grid;
+	grid-template-columns: 70% 30%;
+	column-gap: 50px;
+	margin-top: 10rem;
+}
+
+section.con-sectioning div h2 {
+	padding-bottom: 5px;
+	color: var(--primary-color);
+}
+
+section.con-sectioning div h2.first {
+	border-bottom: 2px solid var(--dark-color);
+	width: 70%;
+}
+
+section aside form {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 90%;
+}
+
+section aside form input,
+section aside form select {
+	background-color: var(--secondary-color);
+	font-size: var(--text-size);
+	outline: none;
+	border: none;
+	border-radius: var(--br);
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+section aside form img {
+	width: 100%;
+}
+
+section aside form div.pricing {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 0;
+}
+
+section aside form div.pricing span {
+	color: var(--primary-color);
+	font-weight: bolder;
+}
+
+section aside form div.pricing a {
+	color: black;
+}
+
+section aside form button {
+	background-color: var(--primary-color);
+	font-size: var(--text-size);
+	outline: none;
+	border: none;
+	border-radius: var(--br);
+	padding: 10px;
+	color: white;
+}
+
+.faq-container {
+	background-color: var(--secondary-color);
+	padding: 10px 50px;
+	max-width: 600px;
+	margin-top: 50px;
+	border-radius: 15px;
+}
+
+/* ---------- END CHANGE OF NAME PAGE DESIGN ---------- */
 
 /* FOOTER */
 footer {
@@ -543,6 +618,20 @@ footer section.footer-socials a i {
 		font-size: var(--text-size);
 	}
 
+	/* CHANGE OF NAME PAGE */
+	section.con-sectioning {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 90%;
+		margin: 10rem auto;
+	}
+
+	section.con-sectioning div h2.first {
+		margin-top: 3rem;
+	}
+
+	/* END CHANGE OF NAME PAGE */
+
 	/* end popular forms section */
 
 	footer {
@@ -553,6 +642,10 @@ footer section.footer-socials a i {
 
 /* For mobile */
 @media screen and (max-width: 500px) {
+	section h2 {
+		font-size: var(--text-size);
+	}
+
 	header>div.header-content div {
 		margin-top: 250px;
 	}
@@ -624,6 +717,21 @@ footer section.footer-socials a i {
 	/* courts search result */
 	section.courts-search-result div {
 		width: 100%;
+	}
+
+	/* CHANGE OF NAME PAGE */
+	main.con-main {
+		margin: auto 1rem 0px 2.5rem;
+	}
+
+	section.con-sectioning {
+		width: 100%;
+		margin: 8rem auto 2rem auto;
+	}
+
+	.faq-container {
+		padding: 5px 20px;
+		margin-top: 30px;
 	}
 
 	/* footer */
