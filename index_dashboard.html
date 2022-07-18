@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="./css/dashboard-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | E-Forms</title>
+
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/dashboard-style.css">
 </head>
 
 <body>
     <div class="sidebar">
         <div class="logo-details">
-            <i class='bx bxl-c-plus-plus icon'></i>
-            <div class="logo_name">CodingLab</div>
+            <i class='bx bx-book-content logo-icon'></i>
+            <div class="logo_name">E-Forms ng</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -25,6 +26,13 @@
                 <span class="tooltip">Search</span>
             </li>
             <li>
+                <a href="./index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li class="active-sidebar-menu">
                 <a href="#">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
@@ -34,71 +42,115 @@
             <li>
                 <a href="#">
                     <i class='bx bx-user'></i>
-                    <span class="links_name">User</span>
+                    <span class="links_name">Account</span>
                 </a>
-                <span class="tooltip">User</span>
+                <span class="tooltip">Account</span>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-chat'></i>
-                    <span class="links_name">Messages</span>
+                    <i class='bx bx-save'></i>
+                    <span class="links_name">Saved Document</span>
                 </a>
-                <span class="tooltip">Messages</span>
+                <span class="tooltip">Documents</span>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="links_name">Analytics</span>
+                    <i class='bx bxs-credit-card'></i>
+                    <span class="links_name">Payment</span>
                 </a>
-                <span class="tooltip">Analytics</span>
+                <span class="tooltip">Payment</span>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-folder'></i>
-                    <span class="links_name">File Manager</span>
+                    <i class='bx bxs-user-account'></i>
+                    <span class="links_name">User Settings</span>
                 </a>
-                <span class="tooltip">Files</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cart-alt'></i>
-                    <span class="links_name">Order</span>
-                </a>
-                <span class="tooltip">Order</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-heart'></i>
-                    <span class="links_name">Saved</span>
-                </a>
-                <span class="tooltip">Saved</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
-                    <span class="links_name">Setting</span>
-                </a>
-                <span class="tooltip">Setting</span>
+                <span class="tooltip">Settings</span>
             </li>
             <li class="profile">
                 <div class="profile-details">
-                    <!--<img src="profile.jpg" alt="profileImg">-->
+                    <img src="./images/man-smiling.png" alt="profileImg">
                     <div class="name_job">
-                        <div class="name">Prem Shahi</div>
+                        <div class="name">John Obi</div>
                         <div class="job">Web designer</div>
                     </div>
                 </div>
-                <i class='bx bx-log-out' id="log_out"></i>
+                <a href="#"><i class='bx bx-log-out' id="log_out"></i></a>
             </li>
         </ul>
     </div>
     <section class="home-section">
-        <div class="text">Dashboard</div>
+        <h2 class="text container my-docs-head">My Documents</h2>
+        <div class="doc-sample-preview container">
+
+            <div>
+                <img src="./images/documents_preview.png" alt="" />
+                <h4>Age Declaration</h4>
+                <small>date: 19-02-2022</small>
+                <div class="copy-code-container">
+                    <p>AADh48925bi828</p>
+                    <div class="copy-code-p">
+                        <a href="#">
+                            <i class='bx bx-copy'></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="status pending">Pending</p>
+            </div>
+            <div>
+                <img src="./images/documents_preview.png" alt="" />
+                <h4>Change of Name</h4>
+                <small>date: 19-02-2022</small>
+                <div class="copy-code-container">
+                    <p>AADh48925bi828</p>
+                    <div class="copy-code-p">
+                        <a href="#">
+                            <i class='bx bx-copy'></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="status pending">Pending</p>
+            </div>
+            <div>
+                <img src="./images/documents_preview.png" alt="" />
+                <h4>Lost Document</h4>
+                <small>date: 19-02-2022</small>
+                <div class="copy-code-container">
+                    <p>AADh48925bi828</p>
+                    <div class="copy-code-p">
+                        <a href="#">
+                            <i class='bx bx-copy'></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="status pending">Pending</p>
+            </div>
+        </div>
+
+        <p class="text-center mt-3 container">
+            Visit the selected court with this <strong>Tracking ID</strong> and a means of
+            identification to collect your affidavit
+        </p>
+        <div class="text-center">
+            <a href="#" class="btn my-4">Create New Document</a>
+        </div>
     </section>
     <script>
         let sidebar = document.querySelector(".sidebar");
         let closeBtn = document.querySelector("#btn");
         let searchBtn = document.querySelector(".bx-search");
+        let logoName = document.querySelector(".logo_name");
+        let logoIcon = document.querySelector(".logo-icon");
+
+        logoName.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            // menuBtnChange();//calling the function(optional)
+        });
+
+        logoIcon.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            // menuBtnChange();//calling the function(optional)
+        });
 
         closeBtn.addEventListener("click", () => {
             sidebar.classList.toggle("open");
