@@ -543,24 +543,28 @@ section.form-details-container .logos p {
 	text-decoration: underline;
 	word-spacing: 5px;
 }
-section.form-details-container .upload-passport{
+
+section.form-details-container .upload-passport {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 3rem;
 	/* width: 100%; */
 }
-section.form-details-container .upload-passport div.upload-form-container{
+
+section.form-details-container .upload-passport div.upload-form-container {
 	width: 200px;
 	height: 200px;
 	border: 3px dashed black;
 }
-.upload-form{
+
+.upload-form {
 	height: 100%;
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
 }
-.upload-form button{
+
+.upload-form button {
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -571,29 +575,34 @@ section.form-details-container .upload-passport div.upload-form-container{
 	text-decoration: underline;
 	font-size: var(--medium-text-size);
 }
-section.edit-affidavit-details{
+
+section.edit-affidavit-details {
 	font-size: var(--text-size);
 	word-spacing: 5px;
 }
-section div.oath-signatories{
+
+section div.oath-signatories {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 4rem;
 }
-.sign-lines{
+
+.sign-lines {
 	display: inline-block;
 	width: 150px;
 	height: 2px;
 	background-color: black;
 }
-.oath-form-final-section{
+
+.oath-form-final-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-top: 3rem;
 }
-.oath-form-final-section button{
+
+.oath-form-final-section button {
 	background-color: var(--primary-color);
 	color: white;
 	font-size: var(--text-size);
@@ -603,7 +612,67 @@ section div.oath-signatories{
 	padding: 15px 40px;
 	cursor: pointer;
 }
+
 /* ---------- END FILL FORM PAGE ---------- */
+
+/* ---------- BASIC INFO PAGE ----------- */
+main.basic-info-main-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 7rem 0;
+}
+
+main.basic-info-main-container .first-section {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: var(--medium-text-size);
+}
+
+main .first-section div.next-step {
+	opacity: .2;
+}
+
+main.basic-info-main-container .first-section div span {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 50%;
+	border: 1px solid var(--primary-color);
+}
+
+main.basic-info-main-container .second-section {
+	width: 70%;
+	margin-right: 20px;
+}
+
+main.basic-info-main-container .second-section form div div {
+	margin: 5px 0;
+}
+
+main.basic-info-main-container .second-section form div div label {
+	display: block;
+}
+
+main.basic-info-main-container .second-section form div div input,
+main.basic-info-main-container .second-section form .contact-address-field textarea {
+	background-color: var(--secondary-color);
+	border: none;
+	outline: none;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+main.basic-info-main-container .second-section form .contact-address-field textarea {
+	height: 70px;
+}
+
+/* ---------- END BASIC INFO PAGE ----------- */
 
 /* FOOTER */
 footer {
@@ -830,6 +899,20 @@ footer section.footer-socials a i {
 
 	/* END CHANGE OF NAME PAGE */
 
+	/* BASIC INFO PAGE */
+	main.basic-info-main-container .first-section {
+		font-size: var(--text-size);
+		margin-left: 10px;
+	}
+
+	main.basic-info-main-container .first-section div span {
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+	}
+
+	/* END BASIC INFO PAGE */
+
 	/* end popular forms section */
 
 	footer {
@@ -942,17 +1025,58 @@ footer section.footer-socials a i {
 		font-size: 12px;
 		font-weight: bold;
 	}
-	section.form-details-container .upload-passport{
+
+	section.form-details-container .upload-passport {
 		justify-content: center;
 		margin-top: 2rem;
 	}
-	section div.oath-signatories{
+
+	section div.oath-signatories {
 		display: block;
 		text-align: center;
 	}
-	section div.oath-signatories div{
+
+	section div.oath-signatories div {
 		margin-bottom: 50px;
 	}
+
+
+	/* ---------- BASIC INFO PAGE ----------- */
+	main.basic-info-main-container {
+		display: block;
+		width: 100%;
+	}
+
+	main.basic-info-main-container section.first-section {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--text-size);
+		width: 100%;
+	}
+
+	main.basic-info-main-container .first-section div span {
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+	}
+
+	main.basic-info-main-container .first-section .remove-margin{
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	main.basic-info-main-container .second-section {
+		width: 100%;
+		padding: 0 20px;
+	}
+	section form div.first-set, section form div.second-set{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* ---------- END BASIC INFO PAGE ----------- */
+
 
 	/* footer */
 	footer a {
