@@ -24,6 +24,7 @@
 	/* makes it so that margin and padding does not add to the size of the element*/
 	margin: 0;
 	padding: 0;
+	/* overflow-x: hidden; */
 }
 
 body,
@@ -32,6 +33,7 @@ html {
 	margin: 0;
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
 }
 
 /* *** HEADER STYLING *** */
@@ -409,6 +411,7 @@ section aside form button {
 
 
 /* ---------- FILL FORM PAGE ---------- */
+
 .step-wizard {
 	margin-top: 7rem;
 }
@@ -564,13 +567,17 @@ section.form-details-container .upload-passport div.upload-form-container {
 	align-items: center;
 }
 
-.upload-form button {
+.upload-form img {
+	width: 100%;
+}
+
+section.form-details-container .upload-passport div.upload-form-container label {
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
-	outline: none;
-	border: none;
-	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: var(--primary-color);
 	text-decoration: underline;
 	font-size: var(--medium-text-size);
@@ -635,6 +642,10 @@ main .first-section div.next-step {
 	opacity: .2;
 }
 
+main.basic-info-main-container .first-section div {
+	display: flex;
+}
+
 main.basic-info-main-container .first-section div span {
 	display: inline-block;
 	width: 50px;
@@ -643,11 +654,22 @@ main.basic-info-main-container .first-section div span {
 	text-align: center;
 	border-radius: 50%;
 	border: 1px solid var(--primary-color);
+	overflow: hidden;
+}
+
+main.basic-info-main-container .first-section div strong {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+main.basic-info-main-container .first-section div span.form-filled {
+	background-color: var(--primary-color);
+	color: white;
 }
 
 main.basic-info-main-container .second-section {
 	width: 70%;
-	margin-right: 20px;
+	margin-right: 100px;
 }
 
 main.basic-info-main-container .second-section form div div {
@@ -672,7 +694,191 @@ main.basic-info-main-container .second-section form .contact-address-field texta
 	height: 70px;
 }
 
+section.second-section.next-section img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	padding: 30px;
+	border: 1px solid black;
+
+}
+
+section.second-section.next-section input[type='file'],
+.upload-form-container input[type='file'] {
+	display: none;
+}
+
+.make-cursor-pointer {
+	cursor: pointer;
+}
+
 /* ---------- END BASIC INFO PAGE ----------- */
+
+/* AFFIDAVIT FORM PREVIW PAGE */
+.save-for-later {
+	/* margin: 3rem 0; */
+	display: inline-block;
+	padding: 10px 30px;
+	cursor: pointer;
+	background-color: #fff;
+	color: var(--primary-color);
+	border-radius: 5px;
+	border: 1px solid var(--primary-color);
+	text-decoration: none;
+	transition: background-color .5s;
+}
+
+.save-for-later:hover {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+/* END AFFIDAVIT FORM PREVIW PAGE */
+
+
+/* AFFIDAVIT SUBMIT FORM PREVIEW */
+.asfp-preview-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.asfp-preview-container>* {
+	width: 40%;
+}
+
+/* END AFFIDAVIT SUBMIT FORM PREVIEW */
+
+/* SIGN UP PAGE */
+.signup-container {
+	height: 200%;
+	background-image: url('../images/handwithpen.png');
+	background-repeat: no-repeat;
+	/* background-position: center; */
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.signup-container .overlay {
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-color);
+	position: absolute;
+	opacity: .4;
+	/* z-index: 2; */
+}
+
+.signup-container h1,
+.signup-container p,
+.signup-container form {
+	position: relative;
+	z-index: 3;
+}
+
+.signup-container form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.signup-container form div label {
+	display: block;
+	margin-left: 20px;
+	font-weight: bolder;
+}
+
+.signup-container form div label[for='terms-of-use'] {
+	display: inline-block;
+	font-size: var(--text-size);
+}
+
+.signup-container form div label[for='terms-of-use'] a {
+	color: white;
+	text-decoration: none;
+}
+
+.signup-container form div input {
+	width: 500px;
+	padding: .5rem 2rem;
+}
+
+.signup-container form div input[id='terms-of-use'] {
+	width: auto;
+	margin-top: 1rem;
+}
+
+.signup-container form div i {
+	position: relative;
+	left: 30px;
+	color: rgb(194, 187, 187);
+}
+
+.suw-social-btns {
+	display: block;
+	text-decoration: none;
+	background-color: white;
+	color: var(--primary-color);
+	padding: 1rem 5rem;
+	position: relative;
+	z-index: inherit;
+	margin: 1rem 0;
+}
+
+/* END SIGN UP PAGE */
+
+/* SUCCESS PAGE */
+.success-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10rem auto 3rem auto;
+	max-width: 600px;
+}
+
+.success-container>i {
+	background-color: var(--primary-color);
+	color: white;
+	font-size: 3.5rem;
+	font-weight: bolder;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.success-container>div {
+	border: 2px solid var(--primary-color);
+	padding: 1rem 2rem;
+	color: var(--primary-color);
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+
+.success-container>div:hover,
+.success-container>div:active,
+.signup-container>div:focus {
+	border: 2px solid var(--primary-color);
+	background-color: var(--primary-color);
+	color: white;
+	transition: all .5s;
+}
+
+/* END SUCCESS PAGE */
+
 
 /* FOOTER */
 footer {
@@ -885,6 +1091,8 @@ footer section.footer-socials a i {
 		font-size: var(--text-size);
 	}
 
+	/* end popular forms section */
+
 	/* CHANGE OF NAME PAGE */
 	section.con-sectioning {
 		display: flex;
@@ -912,8 +1120,18 @@ footer section.footer-socials a i {
 	}
 
 	/* END BASIC INFO PAGE */
+	.asfp-preview-container>* {
+		width: 70%;
+	}
 
-	/* end popular forms section */
+	/* SIGN UP PAGE */
+	.signup-container {
+		padding: 20rem 0;
+	}
+
+	.asfp-preview-container a.save-for-later {
+		margin-bottom: 2rem;
+	}
 
 	footer {
 		padding-top: 1rem;
@@ -1016,6 +1234,11 @@ footer section.footer-socials a i {
 	}
 
 	/* FILL FORM PAGE */
+	section.form-details-container div.mr-5 {
+		margin: 0;
+		margin-top: 2rem;
+	}
+
 	section.form-details-container .logos img {
 		width: 50px;
 		height: 50px;
@@ -1028,6 +1251,11 @@ footer section.footer-socials a i {
 
 	section.form-details-container .upload-passport {
 		justify-content: center;
+		margin-top: 2rem;
+	}
+
+	.edit-affidavit-details {
+		margin: 0;
 		margin-top: 2rem;
 	}
 
@@ -1062,7 +1290,7 @@ footer section.footer-socials a i {
 		padding: 5px;
 	}
 
-	main.basic-info-main-container .first-section .remove-margin{
+	main.basic-info-main-container .first-section .remove-margin {
 		margin: 0;
 		margin-right: 10px;
 	}
@@ -1071,12 +1299,73 @@ footer section.footer-socials a i {
 		width: 100%;
 		padding: 0 20px;
 	}
-	section form div.first-set, section form div.second-set{
+
+	section form div.first-set,
+	section form div.second-set {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	main.basic-info-main-container {
+		margin-left: 0;
+		margin-top: 2rem;
+		padding-left: 0;
+	}
+
+	main.basic-info-main-container .first-section div strong {
+		margin-top: 5px;
 	}
 
 	/* ---------- END BASIC INFO PAGE ----------- */
 
+	/* AFFIDAVIT SUBMIT FORM PREVIEW */
+	.asfp-preview-container>* {
+		width: 80%;
+	}
+
+	/* END AFFIDAVIT SUBMIT FORM PREVIEW */
+
+	/* SIGN UP PAGE */
+	.signup-container {
+		padding: 20rem 0;
+	}
+
+	.signup-container form {
+		width: 80%;
+	}
+
+	.signup-container form div label {
+		margin-left: 0px;
+	}
+
+	.signup-container form div input {
+		width: 400px;
+	}
+
+	.signup-container form div label[for='terms-of-use'] {
+		font-size: 14px;
+	}
+
+	.signup-container form div i {
+		position: relative;
+		left: 10px;
+		top: 28px;
+		color: rgb(194, 187, 187);
+	}
+
+
+	/* END SIGN UP PAGE */
+
+
+	/* SUCCESS PAGE */
+	.success-container {
+		max-width: 400px;
+	}
+
+	.success-container>div {
+		width: 90%;
+	}
+
+	/* END SUCCESS PAGE */
 
 	/* footer */
 	footer a {
@@ -1090,5 +1379,36 @@ footer section.footer-socials a i {
 	footer section.footer-links {
 		margin-top: 1rem;
 	}
+
+}
+
+@media screen and (max-width: 450px) {
+
+	/* SUCCESS PAGE */
+	.success-container {
+		max-width: 300px;
+	}
+
+	.success-container>i {
+		height: 90px;
+		width: 90px;
+	}
+
+	/* END SUCCESS PAGE */
+
+
+	/* SIGN UP PAGE */
+	.signup-container form div {
+		padding: 0 0rem;
+		width: 100%;
+	}
+
+	.signup-container form {
+		width: 90%;
+	}
+
+	/* END SIGN UP PAGE */
+
+
 
 }

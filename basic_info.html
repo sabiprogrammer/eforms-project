@@ -32,20 +32,22 @@
     </header>
 
     <!-- *** MAIN SITE SECTION *** -->
-    <main class="basic-info-main-container container">
+    <main class="basic-info-main-container container ml-5">
         <section class="first-section">
-            <div class="mb-3 remove-margin">
-                <span>1</span>
+            <div class="mb-3 remove-margin prev-step-js">
+                <span class="">1</span>
+                <!-- <span class="form-filled">1</span> -->
                 <strong>Basic Information</strong>
             </div>
-            <div class="next-step">
+            <div class="next-step next-step-js">
                 <span>2</span>
                 <strong>Upload</strong>
             </div>
         </section>
-        <section class="second-section">
+
+        <section class="second-section form-first-part">
             <h2 class="my-2">Basic Information</h2>
-            <form action="" class="">
+            <form action="./index_dashboard.html" class="">
                 <div class="first-set grid grid-3">
                     <div>
                         <label for="first-name">First Name</label>
@@ -86,7 +88,23 @@
                         <input type="text" name="zipcode" id="zipcode" />
                     </div>
                 </div>
-                <button class="btn btn-block sm py-1 mt-2">Save & Continue</button>
+                <button type="button" class="btn btn-block sm py-1 mt-2 continue-to-upload">Save & Continue</button>
+        </section>
+        <section class="second-section next-section text-center form-second-part">
+            <h2 class="my-2">Upload Passport</h2>
+            <input type="file" accept="image/*" class="uploaded passport" name="uploaded-passport"
+                id="uploaded-passport" />
+            <label for="uploaded-passport">
+                <img src="./images/person-plus.png" alt="upload image" class="make-cursor-pointer img-preview">
+            </label>
+            <div class="text-primary sm mt-2 make-cursor-pointer">
+                <i class="fa-solid fa-upload"></i>
+                <label for="uploaded-passport" class="make-cursor-pointer">
+                    <span>Upload Passport</span>
+                </label>
+
+            </div>
+            <button class="mt-4 btn sm">Save</button>
             </form>
         </section>
     </main>
@@ -123,5 +141,26 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </section>
     </footer>
+    <script>
+        const formFirstPart = document.querySelector(".form-first-part");
+        const formSecondPart = document.querySelector(".form-second-part");
+        const continueToUpload = document.querySelector("button.continue-to-upload");
+        const nextStep = document.querySelector(".next-step-js");
+        const prevStep = document.querySelector(".prev-step-js");
+
+        // SAVE AND CONTINUE BASIC_INFO PAGE FORM FUNCTIONALITY
+        formSecondPart.style.display = 'none';
+        continueToUpload.addEventListener("click", () => {
+            // changing the progress indicator styles accordingly
+            nextStep.classList.remove("next-step");
+            prevStep.classList.add("next-step");
+            formFirstPart.style.display = 'none';
+            formSecondPart.style.display = 'block';
+
+        });
+
+    </script>
+    <script src="./js/index.js"></script>
+</body>
 
 </html>

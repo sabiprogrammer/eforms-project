@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Fill Form | E-Forms</title>
+    <title>Form Preview | E-Forms</title>
 </head>
 
 <body>
@@ -69,10 +69,7 @@
             <div class="upload-passport mr-5">
                 <div class="upload-form-container">
                     <form action="" class="upload-form">
-                        <label for="uploaded-passport">upload passport</label>
-                        <img src="./images/logo.png" alt="passport preview" class="img-preview">
-                        <input type="file" accept="image/*" id="uploaded-passport" name="uploaded-passport"/>
-                        <!-- </form> -->
+                        <img src="./images/man-smiling.png" alt="passport preview" class="img-preview">
                 </div>
             </div>
         </section>
@@ -82,18 +79,15 @@
             <div>
                 I,<strong>(click to enter your name), ( click to enter your gener), (click to enter your religion),
                     (ethnicity),</strong>
-                Nigerian Citizen, Resident at ____________________________________ of Nigeria, do hereby make oath and
+                Nigerian Citizen, Resident at <strong>No. 34, Ayo-Ade Street, Esso, Ondo,</strong> of Nigeria, do hereby make oath and
                 state as follows:-
                 <br />1. That I am the declarant herein.
-                <br />2. That I was formerly known, called and addressed as <strong>(Click to enter your former
-                    name).</strong>
-                <br />3. That I got married to one <strong>(click to enter your husband name)</strong> on the <strong>(
-                    Date of marriage)</strong> at <strong>(Click to enter address of venue of marriage
+                <br />2. That I was formerly known, called and addressed as <strong>MISS OYEFUNMILOLA OLUWATOYIN JOY.</strong>
+                <br />3. That I got married to one <strong>MR. AKINMUSAYO OMOLAYO</strong> on the <strong>9th day of May, 2015 at No. 19, Eniolufe Street. Oke-Odunwo, Ondo.</strong> at <strong>(Click to enter address of venue of marriage
                     ceremony)</strong>
-                <br />4. That I now wish to be known, called and addressed as <strong>(click to enter your new
-                    name)</strong> as from now onward.
+                <br />4. That I now wish to be known, called and addressed as <strong>MRS. AKINMUSAYO OLUWATOYIN JOY</strong> as from now onward.
                 <br />5. That all my former documents remain valid.
-                <br />6. That I now implore <strong>(To whom it is addressed to)</strong> to please take note of the
+                <br />6. That I now implore <strong>Local Government Commission, Alagbaka Akure, Ile-Oluji/Oke-Igbo Local Government, Association of National Accountant of Nigeria</strong> to please take note of the
                 above facts.
                 <br />7. That this affidavit is now required for record and official purposes.
                 <br />8. That I swear to this affidavit in good faith.
@@ -101,7 +95,7 @@
             <div class="oath-signatories">
                 <div>
                     <p>Sworn to at the Oath Registry, Ore.</p>
-                    <p>This ______day of <strong>(Month), (Year).</strong></p>
+                    <p>This 17th day of <strong>June, 2022.</strong></p>
                 </div>
                 <div class="text-center">
                     <span class="sign-lines"></span>
@@ -112,7 +106,8 @@
                 <p class="mb-4"><strong>Before me:- </strong></p>
                 <span class="sign-lines"></span>
                 <p class="mb-4 mt-1">COMMISSIONER FOR OATHS</p>
-                <button>Save & Continue</button>
+                <button>Proceed to payment</button>
+                <a href="#" class="save-for-later my-2">save for later</a>
             </div>
         </section>
         </form>
@@ -151,36 +146,11 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </section>
     </footer>
-
     <script>
-        const imgPreview = document.querySelector(".img-preview");
-        const uploadedPassport = document.querySelector("#uploaded-passport");
-        const hideImgLabel = document.querySelector('label[for="uploaded-passport"]');
         const removeImgPreviewBorder = document.querySelector('section.form-details-container .upload-passport div.upload-form-container');
-
-        // hiding the image the preview by default
-        imgPreview.style.display = 'none';
         
-        // ABILITY OF THE USER TO UPLOAD PASSPORT
-        uploadedPassport.addEventListener("change", () => {
-            let reader = new FileReader();
-            reader.readAsDataURL(uploadedPassport.files[0]);
-            reader.onload = () => {
-                // displaying the user selected image
-                imgPreview.style.display = 'inline-block';
-                imgPreview.setAttribute("src", reader.result);
-
-                // hiding the 'upload passport label'
-                hideImgLabel.style.display = 'none';
-
-                // hiding the image preview dotted borders
-                removeImgPreviewBorder.style.border = 'none';
-
-            }
-            // console.log(uploadedPassport.files[0].name);
-        
-        });
-       
+        // hiding the image preview dotted borders
+        removeImgPreviewBorder.style.border = 'none';
     </script>
 </body>
 
