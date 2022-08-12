@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #fff;
+}
+
+/* header navigation */
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 5%;
+    height: 100px;
+    background-color: var(--dark-color);
+}
+
+nav .logo {
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav .logo img {
+    width: 50%;
+}
+
+nav .links {
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links li:hover,
+nav .links li.active {
+    border-bottom: 2px solid green;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .links li:last-child {
+    margin-left: 20%;
+}
+
+nav .links a.text {
+    display: flex;
+}
+
+nav .links a.text i {
+    padding-right: .2em;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(209, 203, 203, 0.6), rgba(209, 203, 203, 0.6)), url(../images/building-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-group {
+    padding: 0 30px;
+    min-width: 500px;
+    width: 70%;
+    height: 100vh;
+    max-width: 650px;
+}
+
+.input-item,
+.input-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-item input,
+button {
+    border: none;
+    padding: .4em 2.5em;
+    left: .5rem;
+    font-weight: lighter;
+    border-radius: 5px;
+    outline: none;
+    font-size: .9em;
+}
+
+.input-item label {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+}
+
+.input-item,
+h4 {
+    margin-top: 5px;
+    color: green;
+    text-transform: lowercase;
+}
+
+.input-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-buttons button {
+    width: 70%;
+    margin: .4em;
+    cursor: pointer;
+}
+
+h5,
+h4.sign-up-option {
+    text-align: center;
+    font-size: .8rem;
+    color: #000;
+}
+
+span,
+.forgot-pass {
+    color: green;
+    cursor: pointer;
+}
+
+button:nth-child(1) {
+    background-color: green;
+    color: #fff;
+    margin-bottom: 2.5em;
+}
+
+button:nth-child(3),
+button:nth-child(4) {
+    border: 2px solid green;
+}
+
+.icon {
+    position: absolute;
+    top: calc(60%);
+    left: .5rem;
+    color: #000;
+    font-size: 10px;
+
+}
+
+#pass-icon {
+    position: absolute;
+    top: calc(65%);
+    right: .5rem;
+    cursor: pointer;
+    color: #000;
+    font-size: 10px;
+}
+
+@media (max-width: 1104px) {
+    form {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .input-buttons button {
+        margin: .2em;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    form {
+        width: 50%;
+        margin: auto;
+    }
+
+    .input-buttons button {
+        margin: .2em;
+        width: 100%;
+        font-size: .7em;
+    }
+}
+
+
+/* FOOTER */
+footer {
+	background-color: var(--dark-color);
+	font-size: var(--text-size);
+}
+
+footer section.first {
+	justify-content: space-between;
+}
+
+footer section img.logo {
+	width: 20%;
+}
+
+footer section.first a {
+	color: white;
+	text-decoration: none;
+}
+
+footer section.first a.login {
+	background-color: white;
+	color: var(--primary-color);
+	padding: 5px 10px;
+}
+
+footer section.footer-links {
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+footer section.footer-links a {
+	color: white;
+	text-decoration: none;
+	width: 20%;
+	margin: 3px;
+	padding: 10px;
+}
+
+footer section.footer-socials {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+footer section.footer-socials a {
+	color: white;
+	text-decoration: none;
+}
+
+footer section.footer-socials a i {
+	font-size: var(--medium-text-size);
+}
+
+/* END FOOTER */
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1020px) {
+
+	/* Header support icon */
+	header img.support-icon {
+		top: 300px;
+		width: 60px;
+	}
+
+	/* End Header support icon */
+	header>div.header-content div {
+		margin-top: 150px;
+	}
+
+	header>div.header-content div h1 {
+		font-size: 40px;
+	}
+}
+
+/* For Tablets */
+@media screen and (max-width: 768px) {
+	::placeholder {
+		font-size: 14px;
+	}
+
+	/* Header/Nav section */
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+
+	nav .logo img {
+		width: 30%;
+	}
+
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0, 0, 0, .8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+
+	nav .links a {
+		font-size: 20px;
+	}
+
+	nav .links li:last-child {
+		margin-left: 0;
+	}
+
+	nav :checked~.links {
+		bottom: 0;
+	}
+
+	nav .icon-burger {
+		display: block;
+	}
+
+	nav :checked~.icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+
+	nav :checked~.icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+
+	nav :checked~.icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
+	header>div.header-content div {
+		margin-top: 200px;
+	}
+
+	header div h1 {
+		font-size: 35px;
+		margin-left: 3rem;
+	}
+
+	header div h1 span {
+		padding: 3px;
+	}
+
+	header div p {
+		margin-left: 3rem;
+	}
+
+	section>h2 {
+		font-size: 20px;
+	}
+
+	/* For Business type section of the page */
+	section.first-search {
+		margin-top: 2px;
+	}
+
+	main section.affidavit-type {
+		flex-wrap: wrap;
+	}
+
+	/* for search affidavit section */
+	section.search-affidavit form {
+		flex-wrap: wrap;
+	}
+
+	section.search-affidavit form input,
+	section.search-affidavit form select,
+	section.search-affidavit form button {
+		width: 85%;
+		margin-bottom: 10px;
+	}
+
+
+	/* Affidavit Steps */
+	section.affidavit-steps>div>div {
+		padding: 15px;
+	}
+
+	section.affidavit-steps .step-icon-container {
+		font-size: 70px;
+	}
+
+	section.affidavit-steps>div>div p {
+		font-size: var(--text-size);
+		margin-left: -10px;
+	}
+
+	/* End Affidavit Steps */
+
+	/* popular forms section */
+	section.popular-forms>div>div {
+		width: 30%;
+		padding: 10px 0;
+	}
+
+	section.popular-forms>div>div span {
+		font-size: 70px;
+	}
+
+	section.popular-forms>div>div p {
+		font-size: var(--text-size);
+	}
+
+	/* end popular forms section */
+
+	/* CHANGE OF NAME PAGE */
+	section.con-sectioning {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 90%;
+		margin: 10rem auto;
+	}
+
+	section.con-sectioning div h2.first {
+		margin-top: 3rem;
+	}
+
+	/* END CHANGE OF NAME PAGE */
+
+	/* BASIC INFO PAGE */
+	main.basic-info-main-container .first-section {
+		font-size: var(--text-size);
+		margin-left: 10px;
+	}
+
+	main.basic-info-main-container .first-section div span {
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+	}
+
+	/* END BASIC INFO PAGE */
+	.asfp-preview-container>* {
+		width: 70%;
+	}
+
+	/* SIGN UP PAGE */
+	.signup-container {
+		padding: 20rem 0;
+	}
+
+	.asfp-preview-container a.save-for-later {
+		margin-bottom: 2rem;
+	}
+
+	footer {
+		padding-top: 1rem;
+	}
+
+}
+
+/* For mobile */
+@media screen and (max-width: 500px) {
+	section h2 {
+		font-size: var(--text-size);
+	}
+
+	header>div.header-content div {
+		margin-top: 250px;
+	}
+
+	header>div.header-content {
+		display: block;
+	}
+
+	header>div>img {
+		width: 80%;
+		margin-top: -30px;
+	}
+
+	header div h1 {
+		font-size: 30px;
+		margin-left: 1rem;
+	}
+
+	header div h1 span {
+		padding: 3px;
+	}
+
+	header div p {
+		font-size: var(--text-size);
+		margin-left: 1rem;
+	}
+
+	/* Affidavit Steps */
+	section.affidavit-steps>div {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	section.affidavit-steps>div>div {
+		padding: 10px;
+		width: 100px;
+	}
+
+	section.affidavit-steps .step-icon-container {
+		font-size: 30px;
+	}
+
+	section.affidavit-steps>div>div p {
+		font-size: 13px;
+	}
+
+	section.affidavit-steps>div>div .step-number {
+		font-size: 12px;
+	}
+
+	/* End Affidavit Steps */
+
+	/* popular forms section */
+	section.popular-forms>div>div {
+		width: 40%;
+	}
+
+	section.popular-forms>div>div span {
+		font-size: 40px;
+	}
+
+	section.popular-forms>div>div p {
+		font-size: 14px;
+	}
+
+	/* end popular forms section */
+
+
+	/* courts search result */
+	section.courts-search-result div {
+		width: 100%;
+	}
+
+	/* CHANGE OF NAME PAGE */
+	main.con-main {
+		margin: auto 1rem 0px 2.5rem;
+	}
+
+	section.con-sectioning {
+		width: 100%;
+		margin: 8rem auto 2rem auto;
+	}
+
+	.faq-container {
+		padding: 5px 20px;
+		margin-top: 30px;
+	}
+
+	/* FILL FORM PAGE */
+	section.form-details-container div.mr-5 {
+		margin: 0;
+		margin-top: 2rem;
+	}
+
+	section.form-details-container .logos img {
+		width: 50px;
+		height: 50px;
+	}
+
+	section.form-details-container .logos p {
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	section.form-details-container .upload-passport {
+		justify-content: center;
+		margin-top: 2rem;
+	}
+
+	.edit-affidavit-details {
+		margin: 0;
+		margin-top: 2rem;
+	}
+
+	section div.oath-signatories {
+		display: block;
+		text-align: center;
+	}
+
+	section div.oath-signatories div {
+		margin-bottom: 50px;
+	}
+
+
+	/* ---------- BASIC INFO PAGE ----------- */
+	main.basic-info-main-container {
+		display: block;
+		width: 100%;
+	}
+
+	main.basic-info-main-container section.first-section {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--text-size);
+		width: 100%;
+	}
+
+	main.basic-info-main-container .first-section div span {
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+	}
+
+	main.basic-info-main-container .first-section .remove-margin {
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	main.basic-info-main-container .second-section {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	section form div.first-set,
+	section form div.second-set {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	main.basic-info-main-container {
+		margin-left: 0;
+		margin-top: 2rem;
+		padding-left: 0;
+	}
+
+	main.basic-info-main-container .first-section div strong {
+		margin-top: 5px;
+	}
+
+	/* ---------- END BASIC INFO PAGE ----------- */
+
+	/* AFFIDAVIT SUBMIT FORM PREVIEW */
+	.asfp-preview-container>* {
+		width: 80%;
+	}
+
+	/* END AFFIDAVIT SUBMIT FORM PREVIEW */
+
+	/* SIGN UP PAGE */
+	.signup-container {
+		padding: 20rem 0;
+	}
+
+	.signup-container form {
+		width: 80%;
+	}
+
+	.signup-container form div label {
+		margin-left: 0px;
+	}
+
+	.signup-container form div input {
+		width: 400px;
+	}
+
+	.signup-container form div label[for='terms-of-use'] {
+		font-size: 14px;
+	}
+
+	.signup-container form div i {
+		position: relative;
+		left: 10px;
+		top: 28px;
+		color: rgb(194, 187, 187);
+	}
+
+
+	/* END SIGN UP PAGE */
+
+
+	/* SUCCESS PAGE */
+	.success-container {
+		max-width: 400px;
+	}
+
+	.success-container>div {
+		width: 90%;
+	}
+
+	/* END SUCCESS PAGE */
+
+	/* footer */
+	footer a {
+		font-size: 13px;
+	}
+
+	footer section.footer-socials a {
+		padding: 10px;
+	}
+
+	footer section.footer-links {
+		margin-top: 1rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	footer section.footer-links a {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+
+	/* SUCCESS PAGE */
+	.success-container {
+		max-width: 300px;
+	}
+
+	.success-container>i {
+		height: 90px;
+		width: 90px;
+	}
+
+	/* END SUCCESS PAGE */
+
+
+	/* SIGN UP PAGE */
+	.signup-container form div {
+		padding: 0 0rem;
+		width: 100%;
+	}
+
+	.signup-container form {
+		width: 90%;
+	}
+
+	/* END SIGN UP PAGE */
+
+}
+
+@media screen and (max-width: 400px) {
+	footer section.footer-links {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

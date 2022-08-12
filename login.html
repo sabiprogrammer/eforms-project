@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Home Page | E-Forms</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input id="nav-toggle" type="checkbox" />
+            <div class="logo"><img src="./images/logo.png" /></div>
+            <ul class="links">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">Personal</a></li>
+                <li><a href="#work">Business</a></li>
+                <li><a href="#projects" class="second-to-last-nav-link">Official</a></li>
+                <li><a href="#" class="text"><i class="fa-solid fa-user-gear"></i> <span>Account</span></a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+    </header>
+
+    <!-- *** MAIN SITE SECTION *** -->
+    <main class="pt-5">
+        <div class="container ">
+            <div class="form-group">
+                <form style="padding-top:10rem">
+                    <div class="input-item">
+                        <label for="email">e-mail</label>
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <input type="email" name="email" placeholder="enter your e-mail address" required>
+                    </div>
+                    <div class="input-item">
+                        <label for="password">password</label>
+                        <i class="fa-solid fa-key icon"></i>
+                        <i class="fa-solid fa-eye" id="pass-icon"></i>
+                        <input type="password" name="password" placeholder="enter your password" required>
+                    </div>
+                    <h4 class="forgot-pass">forgot password ?</h4>
+                    <div class="input-buttons">
+                        <button type="submit">sign in</button>
+                        <h4 class="sign-up-option">Sign-up with</h4>
+                        <button type="submit"><i class="fa-brands fa-google icon"></i>sign in with Google</button>
+                        <button type="submit"><i class="fa-brands fa-facebook icon"></i></i>sign in with Facebook
+                        </button>
+                    </div>
+                    <h5>Don't have an account ? <span>Sign-Up</span></h5>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- *** END MAIN SITE SECTION *** -->
+</html>

@@ -681,6 +681,7 @@ main.basic-info-main-container .second-section form div div label {
 }
 
 main.basic-info-main-container .second-section form div div input,
+main.basic-info-main-container .second-section form div div select,
 main.basic-info-main-container .second-section form .contact-address-field textarea {
 	background-color: var(--secondary-color);
 	border: none;
@@ -1378,6 +1379,12 @@ footer section.footer-socials a i {
 
 	footer section.footer-links {
 		margin-top: 1rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	footer section.footer-links a {
+		width: 100%;
 	}
 
 }
@@ -1409,6 +1416,10 @@ footer section.footer-socials a i {
 
 	/* END SIGN UP PAGE */
 
+}
 
-
+@media screen and (max-width: 400px) {
+	footer section.footer-links {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
