@@ -380,6 +380,31 @@
 }
 
 /* ----- FOR END CHANGE PASSWORD PAGE------ */
+
+
+ /* ----- FOR PAYMENT MADE------ */
+.dpm-table{
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    overflow: auto;
+    display: block;
+}
+.dpm-table th{
+    padding-bottom: 10px;
+}
+.dpm-table tbody tr:nth-child(even){
+    background-color: var(--secondary-color);
+}
+.dpm-table tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+.dpm-table td{
+    padding: 20px;
+    margin: 0 20px;
+}
+
+/* ----- FOR END PAYMENT MADE------ */
 @media (max-width: 1020px) {
     .doc-sample-preview div p.status {
         font-size: 2rem;
