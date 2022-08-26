@@ -363,6 +363,23 @@
     color: var(--primary-color);
 }
 
+/* ----- FOR CHANGE PASSWORD PAGE------ */
+.change-password-form label {
+    display: block;
+}
+
+.change-password-form input {
+    width: 70%;
+    background-color: #eee;
+    font-size: var(--text-size);
+    outline: none;
+    border: none;
+    border-radius: var(--br);
+    padding: 10px;
+    margin-right: var(--br);
+}
+
+/* ----- FOR END CHANGE PASSWORD PAGE------ */
 @media (max-width: 1020px) {
     .doc-sample-preview div p.status {
         font-size: 2rem;
@@ -385,22 +402,42 @@
         left: 5%;
         font-size: 1rem;
     }
-    .doc-sample-preview div h4{
+
+    .doc-sample-preview div h4 {
         font-size: 16px;
     }
+
     .copy-code-container p {
         font-size: 12px;
     }
-    .copy-code-container div a{
+
+    .copy-code-container div a {
         font-size: 14px;
     }
+
+    /* ----- FOR CHANGE PASSWORD PAGE------ */
+    .change-password-form-h2 {
+        font-size: 18px;
+    }
+
+    .change-password-form label {
+        font-size: 13px;
+    }
+
+    .change-password-form input {
+        width: 100%;
+        padding: 7px;
+    }
+
+    /* ----- FOR END CHANGE PASSWORD PAGE------ */
 }
 
 @media (max-width: 500px) {
     .doc-sample-preview div {
         width: 50%;
     }
-    .doc-sample-preview div h4{
+
+    .doc-sample-preview div h4 {
         font-size: 14px;
     }
 
@@ -409,10 +446,12 @@
         left: 10%;
         font-size: 1.5rem;
     }
+
     .copy-code-container p {
         font-size: 10px;
     }
-    .copy-code-container div a{
+
+    .copy-code-container div a {
         font-size: 14px;
     }
 
@@ -428,4 +467,11 @@
         left: 5%;
         font-size: .8rem;
     }
+
+    /* ----- FOR CHANGE PASSWORD PAGE------ */
+    .change-password-form, .change-password-form-h2{
+        padding: 10px;
+    }
+
+    /* ----- FOR END CHANGE PASSWORD PAGE------ */
 }
