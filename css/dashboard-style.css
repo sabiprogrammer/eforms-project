@@ -382,32 +382,191 @@
 /* ----- FOR END CHANGE PASSWORD PAGE------ */
 
 
- /* ----- FOR PAYMENT MADE------ */
-.dpm-table{
+/* ----- FOR PAYMENT MADE------ */
+.dpm-table {
     width: 100%;
     border-collapse: collapse;
     white-space: nowrap;
     overflow: auto;
     display: block;
 }
-.dpm-table th{
+
+.dpm-table th {
     padding-bottom: 10px;
 }
-.dpm-table tbody tr:nth-child(even){
+
+.dpm-table tbody tr:nth-child(even) {
     background-color: var(--secondary-color);
 }
-.dpm-table tbody tr:nth-child(odd){
+
+.dpm-table tbody tr:nth-child(odd) {
     background-color: #fff;
 }
-.dpm-table td{
+
+.dpm-table td {
     padding: 20px;
     margin: 0 20px;
 }
 
 /* ----- FOR END PAYMENT MADE------ */
+
+
+/* ----- FOR ADMIN HOME ------ */
+.setting-max-width{
+    max-width: 900px;
+}
+
+.admin-home>div {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.admin-home>div>a {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.admin-home>div>a:first-child {
+    margin-right: 10px;
+}
+
+.admin-home-search-form {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.admin-home-search-form input {
+    width: 70%;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: var(--br);
+    padding: 7px;
+}
+
+.admin-home-search-form button {
+    width: 30%;
+    margin-left: 5px;
+    padding: 7px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: var(--br);
+    border: none;
+    cursor: pointer;
+}
+.dashboard-card-container{
+    width: 100%;
+    margin: 0 auto;
+}
+.dashboard-card-container .card{
+    margin: 0;
+}
+.dashboard-card-container .card > p{
+    color: var(--primary-color);
+    font-weight: bolder;
+    font-size: 40px;
+}
+.admin-home .recent-app-container{
+    text-align: center;
+}
+.recent-app-container > div{
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    /* text-align: left; */
+}
+.recent-app-container > div:hover,
+.recent-app-container > div:focus,
+.recent-app-container > div:active{
+    background-color: #fff;
+    color: var(--primary-color);
+}
+.recent-app-container > div > span{
+    padding-right: 7rem;
+}
+
+.recent-app-container > div > span:last-child{
+    padding-right: 0rem;
+}
+/* ----- FOR END ADMIN HOME ------ */
+
+
+/* ----- FOR DASHBOARD PENDING AFFIDAVIT DETAILS ------ */
+.dpad{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.admin-home .dpad{
+    text-align: center;
+}
+.dpad p{
+    color: var(--primary-color);
+}
+.dpad-images{
+    display: flex;
+    justify-content: space-between;
+}
+.dpad-images p{
+    font-size: 14px;
+    text-align: center;
+    max-width: 400px;
+    text-decoration: underline;
+}
+.dpad-images img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.affidavit-type{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.dpad-man img{
+    width: 200px;
+}
+.dpad-affidavit-details{
+    text-align: left;
+}
+#dpad-sig-date{
+    text-align: left;
+}
+#text-center{
+    text-align: center;
+}
+#add-stamp-btn{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+/* ----- FOR END DASHBOARD PENDING AFFIDAVIT DETAILS ------ */
+
+
+/* ----- FOR PROCESS CONFIRMED ------ */
+#approved-img{
+    width: 120px;
+    position: relative;
+    left: -230px;
+}
+#approved-img2{
+    width: 120px;
+    position: relative;
+    top: 50px;
+}
+/* ----- FOR END PROCESS CONFIRMED ------ */
+
 @media (max-width: 1020px) {
     .doc-sample-preview div p.status {
         font-size: 2rem;
+    }
+    .setting-max-width{
+        max-width: 700px;
+    }
+    .recent-app-container > div > span{
+        padding-right: 3rem;
     }
 }
 
@@ -418,6 +577,22 @@
 
     .copy-code-container p {
         margin-right: 15px;
+    }
+    .setting-max-width{
+        max-width: 500px;
+    }
+
+    .recent-app-container > div > span{
+        padding-right: 1rem;
+        font-size: 14px;
+    }
+
+    .dpad{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .dpad div p{
+        font-size: 13px;
     }
 }
 
@@ -455,6 +630,24 @@
     }
 
     /* ----- FOR END CHANGE PASSWORD PAGE------ */
+
+    .admin-home>div a{
+        font-size: 13px;
+    }
+
+    .recent-app-container > h2{
+        font-size: 18px;
+    }
+    .recent-app-container > div{
+        width: 500px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .recent-app-container > div > span{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -480,6 +673,15 @@
         font-size: 14px;
     }
 
+    .setting-max-width, .recent-app-container > div{
+        max-width: 350px;
+    }
+    .dashboard-card-container{
+        display: block;
+    }
+    .dashboard-card-container > .card{
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -494,9 +696,41 @@
     }
 
     /* ----- FOR CHANGE PASSWORD PAGE------ */
-    .change-password-form, .change-password-form-h2{
+    .change-password-form,
+    .change-password-form-h2 {
         padding: 10px;
     }
 
     /* ----- FOR END CHANGE PASSWORD PAGE------ */
+
+    .setting-max-width, .recent-app-container > div{
+        max-width: 250px;
+    }
+
+    .dpad{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+
+    .dpad h4{
+        margin-bottom: 0px;
+    }
+
+    .dpad-images p{
+        font-size: 10px;
+        max-width: 350px;
+    }
+
+    #approved-img{
+        left: -100px;
+        top: -100px;
+    }
+    .neg-marg{
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 350px) {
+    .setting-max-width, .recent-app-container > div{
+        max-width: 220px;
+    }
 }

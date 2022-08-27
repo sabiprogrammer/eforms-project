@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | E-Forms</title>
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/dashboard-style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-book-content logo-icon'></i>
+            <div class="logo_name">E-Forms ng</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="./index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li class="active-sidebar-menu">
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Pending</span>
+                </a>
+                <span class="tooltip">Pending</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-save'></i>
+                    <span class="links_name">Approved</span>
+                </a>
+                <span class="tooltip">Approved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-save'></i>
+                    <span class="links_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-account'></i>
+                    <span class="links_name">User Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="./images/hammer-bg.png" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Alex Doe</div>
+                        <div class="job">Magistrate</div>
+                    </div>
+                </div>
+                <a href="#"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section pt-4 admin-home">
+        <!-- <div class="change-password-form-h2 setting-max-width">
+            <a href="#">Login</a>
+            <a href="#">Create Account</a>
+        </div> -->
+        <form action="" class="admin-home-search-form flex setting-max-width">
+            <input type="search" placeholder="search tracking ID" />
+            <button>Search</button>
+        </form>
+
+        <div class="setting-max-width dpad">
+            <div>
+                <h4>Application Name</h4>
+                <p>John Doe</p>
+            </div>
+            <div>
+                <h4>Tracking ID</h4>
+                <p>AAD-h48925bi828</p>
+            </div>
+            <div>
+                <h4>Application Date</h4>
+                <p>10/02/2022</p>
+            </div>
+            <div>
+                <h4>Affidavit Type</h4>
+                <p>Age Declearation</p>
+            </div>
+
+        </div>
+
+        <div class="setting-max-width dpad-images">
+            <img src="./images/justice_logo.png" />
+            <p>
+                IN THE OATH REGISTRY
+                IN THE HIGH COURT OF JUSTICE
+                ONDO STATE OF NIGERIA
+                IN THE ORE JUDICIAL DIVISION
+                HOLDEN AT ONDO
+
+            </p>
+            <img src="./images/nigerian_coat_of_arm.png" />
+        </div>
+
+        <div class="setting-max-width">
+            <p class="affidavit-type">AFFIDAVIT AS TO CHANGE OF NAME</p>
+        </div>
+
+        <div class="setting-max-width dpad-man">
+            <img src="./images/man-smiling.png" alt="man-smiling eforms">
+            <img src="./images/approved-stamp-on-transparent.png" alt="approved" id="approved-img"/>
+        </div>
+
+        <div class="setting-max-width">
+            <p class="dpad-affidavit-details neg-marg">
+                I,<strong class="person-name"> Yakubu Dupe Opeyemi,</strong> <strong class="person-gender"> Female
+                </strong>,
+                <strong class="person-religion"> Christian </strong>, <strong class="person-tribe"> Yoruba </strong>,
+                Nigerian Citizen, Resident at <strong class="person-address"> No. 34, Ayo-Ade Street </strong>,
+                Esso, Ondo, in Ondo State of Nigeria, do hereby make oath and state as follows:-
+                <br />
+                1. That I am the declarant herein.
+                <br />
+                <br />
+                2. That I was formerly known, called and addressed as <strong class="new-name"> MISS OYEFUNMILOLA
+                    OLUWATOYIN JOY</strong>.
+                <br />
+                <br />
+                3. That I got married to one <strong> MR. AKINMUSAYO OMOLAYO</strong> on the
+                <strong> 9th day of May, 2015</strong> at <strong>No. 19, Eniolufe
+                    Street. Oke-Odunwo, Ondo.</strong>
+                <br />
+                <br />
+                4. That I now wish to be known, called and addressed as <strong>MRS. AKINMUSAYO OLUWATOYIN JOY</strong>
+                as from now
+                onward.
+                <br />
+                <br />
+                5. That all my former documents remain valid.
+                <br />
+                <br />
+                6. That I now implore Ondo State <strong> Local Government Commission, Alagbaka Akure,
+                    Ile-Oluji/Oke-Igbo Local
+                    <br />
+                    Government, Association of National Accountant of Nigeria</strong> to please take note of the above
+                facts.
+                <br />
+                <br />
+                7. That this affidavit is now required for record and official purposes.
+                <br />
+                <br />
+                8. That I swear to this affidavit in good faith.
+            </p>
+        </div>
+        <div class="setting-max-width pt-5">
+            <p>
+
+                _______________
+                <br />
+                <strong>DECLARANT</strong>
+
+            </p>
+        </div>
+        <div class="setting-max-width dpad-sig-date pt-4" id="dpad-sig-date">
+            <p>
+                Sworn to at the Oath Registry, Ore.
+                <br />
+                This <strong class="dpad-sig-day"> 17 </strong>
+                day of
+                <strong class="dpad-sig-month">January </strong>,
+                <strong class="dpad-sig-year"> 2022 </strong>.
+            </p>
+        </div>
+
+        <div class="setting-max-width" id="text-center">
+            <p class="mb-3">BEFORE ME:-</p>
+
+            <img src="./images/approved-stamp-on-transparent.png" alt="approved" id="approved-img2"/>
+
+            <p>
+                _________________
+                <br/>
+            <strong> COMMISSIONER FOR OATHS </strong>
+            </p>
+        </div>
+
+        <div class="setting-max-width" id="text-center">
+            <a class="btn" id="add-stamp-btn" href="#"><i class="fa-solid fa-print"></i> Print</a>
+        </div>
+    </section>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+        let logoName = document.querySelector(".logo_name");
+        let logoIcon = document.querySelector(".logo-icon");
+
+        logoName.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            // menuBtnChange();//calling the function(optional)
+        });
+
+        logoIcon.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            // menuBtnChange();//calling the function(optional)
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();//calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+            }
+        }
+    </script>
+</body>
+
+</html>
